@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 //Main.ts -> AppModule -> AppComponent
 
@@ -12,7 +14,9 @@ import { PipesComponent } from './pipes/pipes.component';
   declarations: [
     AppComponent,
     TestComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
