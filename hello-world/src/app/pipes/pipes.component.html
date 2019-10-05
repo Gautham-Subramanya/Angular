@@ -1,0 +1,26 @@
+<p>working of different inbuilt pipes</p>
+<p>-------------------------------------------------------------------------------</p>
+<h3>{{ name }}</h3>
+<h3>{{ name | lowercase }}</h3>
+<h3>{{ name | uppercase }}</h3>
+<h3>{{ name | titlecase}}</h3>
+<h3>{{ name | slice:3:7 }}</h3>
+<h3>{{ person | json }}</h3>
+
+<h4>{{ 3.579 | number:'1.2-3' }}</h4>
+<h4>{{ 3.579 | number:'2.4-5' }}</h4>
+<h4>{{ 3.579 | number:'3.1-2' }}</h4>
+<h4>{{ 3.579 | number:'3.0-1' }}</h4>
+
+<h5>{{ 0.96 | percent }}</h5>
+
+<h2>{{ 25 | currency }}</h2>
+<h2>{{ 25 | currency:'INR' }}</h2>
+<h2>{{ 25 | currency:'INR': 'code' }}</h2>
+
+<h5>{{ date | date:'long' }}</h5>
+<h5>{{ date | date:'medium' }}</h5>
+<h5>{{ date | date:'short' }}</h5>
+<h5>{{ date | date:'shortDate' }}</h5>
+<h5>{{ date | date:'shortTime' }}</h5>
+<h5>{{ date | date }}</h5>
