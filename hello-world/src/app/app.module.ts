@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeService } from './employee.service';
 
 //Main.ts -> AppModule -> AppComponent
 
@@ -22,7 +23,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
