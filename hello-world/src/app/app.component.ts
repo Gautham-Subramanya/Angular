@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-world';
+  public name = "Gautham";
+
+  public testName = "Samarth";
+
+  public randomName = "Karthik";
+
+  public message = "";
+
+  public message1 = "";
+
+
+  public anotherMessage = "Yet another message";
+
 }

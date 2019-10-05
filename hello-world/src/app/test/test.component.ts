@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-test',
@@ -6,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
   // styleUrls: ['./test.component.css']
   template: `
 
+      <button (click)="anotherClick()">Click here to see message sent from child to parent</button>
+
+      {{"Another Message is " + anotherMessage}}
+
+      <button (click)="btnClick()">Click to send data to child</button>
+
+      <h2>{{"Hi " + parentData }}</h2>
+
+      <h2>{{"Hi " + testData }}</h2>
+
+      <h1>{{"Hello " + randomName }}</h1>
+
       <input #someInput type="text">
       <button (click)="displayText(someInput)">Display</button>
-
 
       <h2>Welcome {{name}}</h2>
       <h2>{{2+2}}</h2>
@@ -45,6 +57,23 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class TestComponent implements OnInit {
+
+  @Input() public parentData;
+
+  @Input() public testData;
+
+
+  @Input() public randomName;
+
+
+  @Output() public childEvent = new EventEmitter();
+
+
+  @Output() public anotherEvent = new EventEmitter();
+
+
+  @Input() public anotherMessage;
+
 
   public name = "Gautham";
   public  myId = 'testId';
@@ -83,6 +112,15 @@ export class TestComponent implements OnInit {
 
   displayText(value) {
     console.log(value.value);
+  }
+
+
+  btnClick() {
+    this.childEvent.emit("Hey Angular");
+  }
+
+  anotherClick() {
+    this.anotherEvent.emit("Child to parent");
   }
 
   ngOnInit() {

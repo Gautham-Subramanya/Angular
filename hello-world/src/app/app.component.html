@@ -2,7 +2,11 @@
 <div style="text-align:center">
   <h1>
     From AppComponent
-  </h1>
-</div>
-<app-test></app-test>
 
+    {{ message }}
+
+    
+  </h1>
+  {{ "Another click is " + message1}}
+</div>
+<app-test (anotherEvent) = "message1=$event" (childEvent) = "message=$event" [parentData]= "name" [testData] = "testName" [randomName] = "randomName" [anotherMessage]="anotherMessage"></app-test>
